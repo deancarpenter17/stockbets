@@ -22,6 +22,7 @@
 		85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02B331F9907B50042B9A5 /* RoundedButton.swift */; };
 		9C7A824AC022F28945DD1EF4 /* Pods_StockBetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F791861A696147E3DF8D6B /* Pods_StockBetsUITests.framework */; };
 		C1347E19FA64651661A83572 /* Pods_StockBetsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E582688104B0FBEC0167566D /* Pods_StockBetsTests.framework */; };
+		D83C96A91FA80FCD00457A2F /* FundamentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */; };
 		E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE31FA28F0B005299B5 /* DataStore.swift */; };
 		E3220AE61FA28F52005299B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE51FA28F52005299B5 /* User.swift */; };
 		E39252521FA2693700BF8E38 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39252511FA2693700BF8E38 /* SignupViewController.swift */; };
@@ -72,6 +73,7 @@
 		97661CBD164A8A6C657FA373 /* Pods-StockBetsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsTests/Pods-StockBetsTests.release.xcconfig"; sourceTree = "<group>"; };
 		B3F791861A696147E3DF8D6B /* Pods_StockBetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockBetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B125916779E5B4A99E25FA /* Pods-StockBets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockBets/Pods-StockBets.debug.xcconfig"; sourceTree = "<group>"; };
+		D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundamentalsViewController.swift; sourceTree = "<group>"; };
 		E3220AE31FA28F0B005299B5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		E3220AE51FA28F52005299B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E39252511FA2693700BF8E38 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				E3A8EC521F999A5E00903333 /* LoginViewController.swift */,
 				E39252511FA2693700BF8E38 /* SignupViewController.swift */,
 				E3DEBDD31FA43392000450A6 /* AlertController.swift */,
+				D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				85A02AFB1F981FA10042B9A5 /* SecondViewController.swift in Sources */,
 				E39252521FA2693700BF8E38 /* SignupViewController.swift in Sources */,
 				85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */,
+				D83C96A91FA80FCD00457A2F /* FundamentalsViewController.swift in Sources */,
 				85A02B2D1F983FD80042B9A5 /* LaunchViewController.swift in Sources */,
 				85A02AF71F981FA10042B9A5 /* AppDelegate.swift in Sources */,
 				85A02B2B1F98234C0042B9A5 /* UIImage+Gif.swift in Sources */,
