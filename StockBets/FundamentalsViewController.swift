@@ -13,27 +13,30 @@ class FundamentalsViewController: UIViewController {
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     
     @IBOutlet weak var closePrice: UILabel!
-    @IBOutlet weak var prevClose: UILabel!
     @IBOutlet weak var volume: UILabel!
     @IBOutlet weak var avgVolume: UILabel!
     @IBOutlet weak var dayRange: UILabel!
     @IBOutlet weak var yearRange: UILabel!
     @IBOutlet weak var peRatio: UILabel!
     @IBOutlet weak var mktCap: UILabel!
+    @IBOutlet weak var desc: UILabel!
     
+    
+    var stock : Stock?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         cornerBorder(label: closePrice)
-        cornerBorder(label: prevClose)
         cornerBorder(label: volume)
         cornerBorder(label: avgVolume)
         cornerBorder(label: dayRange)
         cornerBorder(label: yearRange)
         cornerBorder(label: peRatio)
         cornerBorder(label: mktCap)
+        
+        initiateLabels()
     }
     
     func cornerBorder(label : UILabel) {
@@ -49,6 +52,16 @@ class FundamentalsViewController: UIViewController {
     }
     
 
+    func initiateLabels() {
+        closePrice.text = stock?.price
+        volume.text = stock?.volume
+        avgVolume.text = stock?.avgVolume
+        dayRange.text = stock?.dayRange
+        yearRange.text = stock?.yearRange
+        peRatio.text = stock?.peRatio
+        mktCap.text = stock?.mktCap
+        desc.text = stock?.desc
+    }
     /*
     // MARK: - Navigation
 
