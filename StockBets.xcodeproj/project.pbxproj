@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31885A431FA973D00015996F /* PositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A3F1FA973D00015996F /* PositionTableViewCell.swift */; };
+		31885A441FA973D00015996F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A401FA973D00015996F /* ProfileViewController.swift */; };
+		31885A451FA973D00015996F /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A411FA973D00015996F /* Tweet.swift */; };
+		31885A461FA973D00015996F /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A421FA973D00015996F /* TweetTableViewCell.swift */; };
 		36DBEF98EF657292692A1C67 /* Pods_StockBets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE69804DB11277BC6E5F0268 /* Pods_StockBets.framework */; };
 		85A02AF71F981FA10042B9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02AF61F981FA10042B9A5 /* AppDelegate.swift */; };
-		85A02AF91F981FA10042B9A5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02AF81F981FA10042B9A5 /* FirstViewController.swift */; };
-		85A02AFB1F981FA10042B9A5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02AFA1F981FA10042B9A5 /* SecondViewController.swift */; };
 		85A02AFE1F981FA10042B9A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A02AFC1F981FA10042B9A5 /* Main.storyboard */; };
 		85A02B001F981FA10042B9A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A02AFF1F981FA10042B9A5 /* Assets.xcassets */; };
 		85A02B031F981FA10042B9A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A02B011F981FA10042B9A5 /* LaunchScreen.storyboard */; };
@@ -55,12 +57,14 @@
 
 /* Begin PBXFileReference section */
 		053C4A4274B060CC10319468 /* Pods-StockBets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBets.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockBets/Pods-StockBets.release.xcconfig"; sourceTree = "<group>"; };
+		31885A3F1FA973D00015996F /* PositionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionTableViewCell.swift; sourceTree = "<group>"; };
+		31885A401FA973D00015996F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		31885A411FA973D00015996F /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		31885A421FA973D00015996F /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		4CE986698F216D76FAA859B5 /* Pods-StockBetsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsUITests/Pods-StockBetsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0D9916621E324C8E6895E8 /* Pods-StockBetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsUITests/Pods-StockBetsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85A02AF31F981FA10042B9A5 /* StockBets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockBets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A02AF61F981FA10042B9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85A02AF81F981FA10042B9A5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		85A02AFA1F981FA10042B9A5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		85A02AFD1F981FA10042B9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85A02AFF1F981FA10042B9A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85A02B021F981FA10042B9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -217,8 +221,6 @@
 		85A02B281F98213B0042B9A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				85A02AF81F981FA10042B9A5 /* FirstViewController.swift */,
-				85A02AFA1F981FA10042B9A5 /* SecondViewController.swift */,
 				85A02B2C1F983FD80042B9A5 /* LaunchViewController.swift */,
 				E3A8EC521F999A5E00903333 /* LoginViewController.swift */,
 				E39252511FA2693700BF8E38 /* SignupViewController.swift */,
@@ -226,6 +228,7 @@
 				D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */,
 				85FE9E0E1FA8D5AB00110285 /* HomeTableViewController.swift */,
 				85FE9E101FA9036200110285 /* HomeTableViewCell.swift */,
+				31885A401FA973D00015996F /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +245,9 @@
 				85A02B2A1F98234C0042B9A5 /* UIImage+Gif.swift */,
 				85A02B331F9907B50042B9A5 /* RoundedButton.swift */,
 				E3220AE31FA28F0B005299B5 /* DataStore.swift */,
+				31885A3F1FA973D00015996F /* PositionTableViewCell.swift */,
+				31885A421FA973D00015996F /* TweetTableViewCell.swift */,
+				31885A411FA973D00015996F /* Tweet.swift */,
 				E3220AE51FA28F52005299B5 /* User.swift */,
 			);
 			name = Support;
@@ -559,11 +565,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A8EC531F999A5E00903333 /* LoginViewController.swift in Sources */,
-				85A02AFB1F981FA10042B9A5 /* SecondViewController.swift in Sources */,
 				E39252521FA2693700BF8E38 /* SignupViewController.swift in Sources */,
+				31885A461FA973D00015996F /* TweetTableViewCell.swift in Sources */,
 				85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */,
 				85FE9E0F1FA8D5AB00110285 /* HomeTableViewController.swift in Sources */,
 				85FE9E0D1FA8D49E00110285 /* Stock.swift in Sources */,
+				31885A441FA973D00015996F /* ProfileViewController.swift in Sources */,
 				85FE9E111FA9036200110285 /* HomeTableViewCell.swift in Sources */,
 				D83C96A91FA80FCD00457A2F /* FundamentalsViewController.swift in Sources */,
 				85A02B2D1F983FD80042B9A5 /* LaunchViewController.swift in Sources */,
@@ -572,8 +579,9 @@
 				85A02B2B1F98234C0042B9A5 /* UIImage+Gif.swift in Sources */,
 				E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */,
 				E3DEBDD41FA43392000450A6 /* AlertController.swift in Sources */,
+				31885A431FA973D00015996F /* PositionTableViewCell.swift in Sources */,
 				E3220AE61FA28F52005299B5 /* User.swift in Sources */,
-				85A02AF91F981FA10042B9A5 /* FirstViewController.swift in Sources */,
+				31885A451FA973D00015996F /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
