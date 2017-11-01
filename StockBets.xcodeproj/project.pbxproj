@@ -11,6 +11,7 @@
 		31885A441FA973D00015996F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A401FA973D00015996F /* ProfileViewController.swift */; };
 		31885A451FA973D00015996F /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A411FA973D00015996F /* Tweet.swift */; };
 		31885A461FA973D00015996F /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A421FA973D00015996F /* TweetTableViewCell.swift */; };
+		31885A481FA97A280015996F /* 17495408_10206407504384719_512147187_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 31885A471FA97A280015996F /* 17495408_10206407504384719_512147187_n.png */; };
 		36DBEF98EF657292692A1C67 /* Pods_StockBets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE69804DB11277BC6E5F0268 /* Pods_StockBets.framework */; };
 		85A02AF71F981FA10042B9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02AF61F981FA10042B9A5 /* AppDelegate.swift */; };
 		85A02AFE1F981FA10042B9A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A02AFC1F981FA10042B9A5 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		31885A401FA973D00015996F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31885A411FA973D00015996F /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		31885A421FA973D00015996F /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		31885A471FA97A280015996F /* 17495408_10206407504384719_512147187_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 17495408_10206407504384719_512147187_n.png; path = ../../../../Downloads/17495408_10206407504384719_512147187_n.png; sourceTree = "<group>"; };
 		4CE986698F216D76FAA859B5 /* Pods-StockBetsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsUITests/Pods-StockBetsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0D9916621E324C8E6895E8 /* Pods-StockBetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsUITests/Pods-StockBetsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85A02AF31F981FA10042B9A5 /* StockBets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockBets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 				E39252531FA2852200BF8E38 /* GoogleService-Info.plist */,
 				85A02AF61F981FA10042B9A5 /* AppDelegate.swift */,
 				85A02AFC1F981FA10042B9A5 /* Main.storyboard */,
+				31885A471FA97A280015996F /* 17495408_10206407504384719_512147187_n.png */,
 				85A02AFF1F981FA10042B9A5 /* Assets.xcassets */,
 				85A02B011F981FA10042B9A5 /* LaunchScreen.storyboard */,
 				85A02B041F981FA10042B9A5 /* Info.plist */,
@@ -378,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31885A481FA97A280015996F /* 17495408_10206407504384719_512147187_n.png in Resources */,
 				85A02B031F981FA10042B9A5 /* LaunchScreen.storyboard in Resources */,
 				85A02B001F981FA10042B9A5 /* Assets.xcassets in Resources */,
 				E39252541FA2852300BF8E38 /* GoogleService-Info.plist in Resources */,

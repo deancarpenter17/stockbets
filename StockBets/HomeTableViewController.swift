@@ -10,10 +10,11 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
    
-
     var stocks = StockList()
     
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
+    let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
+
     
     override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated: false)
@@ -26,7 +27,12 @@ class HomeTableViewController: UITableViewController {
         // load stock from firebase, initialize it as a stock and add to stocks array
         initializeStockList()
         
-        self.tableView.backgroundColor = themeBlue
+        self.tableView.backgroundColor = UIColor.white
+        
+        self.navigationController?.navigationBar.barTintColor = themeBlue
+        
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: themeGreen]
+
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
@@ -53,7 +59,7 @@ class HomeTableViewController: UITableViewController {
         let stock = stocks.getStock(index: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath) as! HomeTableViewCell
         cell.configStockCell(stock: stock)
-        cell.backgroundColor = themeBlue
+        cell.backgroundColor = UIColor.white
         return cell
     }
     
@@ -75,6 +81,20 @@ class HomeTableViewController: UITableViewController {
         let fb : Stock = Stock(symbol: "FB", name: "Facebook, Inc", price: "180.06", percentChange: "+0.11", volume: "20,170,000", avgVolume: "14,340,000", dayRange: "178.94-180.80", yearRange: "113.55-180.80", peRatio: "40.30", mktCap: "522.9B", desc: "Facebook, Inc. engages in the development of social media applications for people to connect through mobile devices, personal computers, and other surfaces. It enables users to share opinions, ideas, photos, videos, and other activities online.")
         
         stocks.addStock(stock: fb)
+        
+        let nflx : Stock = Stock(symbol: "NFLX", name: "Netflix, Inc", price: "196.43", percentChange: "-0.98", volume: "5,519,000", avgVolume: "7,024,000", dayRange: "195.22-198.59", yearRange: "110.68-204.38", peRatio: "196.23", mktCap: "85.00B", desc: "Netflix, Inc. operates as an Internet subscription service company, which provides subscription service streaming movies and TV episodes over the Internet and sending DVDs by mail.")
+        stocks.addStock(stock: nflx)
+        
+        let xom : Stock = Stock(symbol: "XOM", name: "Exxon", price: "83.35", percentChange: "-0.23", volume: "9,754,000", avgVolume: "9,410,000", dayRange: "83.17-83.68", yearRange: "76.05-93.22", peRatio: "30.05", mktCap: "353.2B", desc: "Exxon Mobil Corp. engages in the exploration, development, and distribution of oil, gas, and petroleum products. It operates through the following segments: Upstream, Downstream, and Chemical.")
+        stocks.addStock(stock: xom)
+        
+        let jpm : Stock = Stock(symbol: "JPM", name: "JPMorgan Chase & Co", price: "100.61", percentChange: "-0.79", volume: "8,690,000", avgVolume: "11,740,000", dayRange: "100.57-101.70", yearRange: "67.64-102.42", peRatio: "14.50", mktCap: "349.0B", desc: "JPMorgan Chase &amp; Co. is a financial holding company, which provides financial and investment banking services.")
+        stocks.addStock(stock: jpm)
+        
+        let msft : Stock = Stock(symbol: "MSFT", name: "Microsoft", price: "83.18", percentChange: "-0.85", volume: "27,090,000", avgVolume: "19,540,000", dayRange: "83.11-84.36", yearRange: "57.28-86.20", peRatio: "30.69", mktCap: "641.8B", desc: "Microsoft Corp. engages in the provision of developing and marketing software and hardware services. Its products include operating systems for computing devices, servers, phones and intelligent devices.")
+        stocks.addStock(stock: msft)
+        
+        
     }
     
     

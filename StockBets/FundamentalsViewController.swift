@@ -35,7 +35,7 @@ class FundamentalsViewController: UIViewController {
         cornerBorder(label: yearRange)
         cornerBorder(label: peRatio)
         cornerBorder(label: mktCap)
-        
+        self.navigationController?.navigationBar.tintColor = themeGreen
         initiateLabels()
     }
     

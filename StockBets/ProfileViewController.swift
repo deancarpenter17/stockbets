@@ -15,6 +15,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
+    let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         self.title = "Profile"
         
         createDataModels()
+        
+        self.navigationController?.navigationBar.barTintColor = themeBlue
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: themeGreen]
         
         // Do any additional setup after loading the view.
     }
