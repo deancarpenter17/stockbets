@@ -13,17 +13,18 @@ class HomeTableViewController: UITableViewController {
 
     var stocks = StockList()
     
-
+    let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
+
         // load stock from firebase, initialize it as a stock and add to stocks array
         initializeStockList()
         
-
+        self.tableView.backgroundColor = themeBlue
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
@@ -50,6 +51,7 @@ class HomeTableViewController: UITableViewController {
         let stock = stocks.getStock(index: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath) as! HomeTableViewCell
         cell.configStockCell(stock: stock)
+        cell.backgroundColor = themeBlue
         return cell
     }
     
@@ -117,7 +119,7 @@ class HomeTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "f" {
+        if segue.identifier == "fundamentalsID" {
             let destination = segue.destination as! FundamentalsViewController
             if let indexPath = tableView.indexPathForSelectedRow {
                 let stock = stocks.getStock(index: indexPath.row)
