@@ -25,9 +25,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = themeBlue
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
     }
     
     override func viewDidLoad() {
@@ -62,8 +60,8 @@ class LoginViewController: UIViewController {
                     guard let user = user else { return }
                     print("User uid: " + String(user.uid))
                     
-                    AlertController.showAlert(self, title: "Success", message: "Successfully signed in!")
-                    // self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                    let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
+                    appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
                 }
         }
         
@@ -88,7 +86,7 @@ class LoginViewController: UIViewController {
         emailTextField.layer.cornerRadius = 15.0
         emailTextField.layer.borderWidth = 1.5
         emailTextField.layer.borderColor = placeholderGray.cgColor
-        emailTextField.attributedPlaceholder = NSAttributedString(string:"Username:", attributes: [NSForegroundColorAttributeName: placeholderGray])
+        emailTextField.attributedPlaceholder = NSAttributedString(string:"Email:", attributes: [NSForegroundColorAttributeName: placeholderGray])
         emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         self.currentHighlight = emailTextField
         
@@ -102,8 +100,12 @@ class LoginViewController: UIViewController {
         
         // initialize Login Button
         loginButton.backgroundColor = themeGreen
-        loginButton.backgroundColor = themeGreen
         loginButton.tintColor = UIColor.white
+        
+        // initialize nav bar
+        /*self.navigationController?.navigationBar.barTintColor = themeBlue
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]*/
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

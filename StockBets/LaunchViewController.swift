@@ -15,32 +15,18 @@ class LaunchViewController: UIViewController {
     @IBOutlet weak var backgroundGIF: UIImageView!
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
-    
+        
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
-    var handle: AuthStateDidChangeListenerHandle?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         let gif = UIImage.gif(name: "background")
         backgroundGIF.image = gif
-        
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user != nil {
-                print(user?.displayName ?? "user is nil!")
-                self.performSegue(withIdentifier: "signedIn", sender: nil)
-            }
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        /*
-        if Auth.auth().currentUser != nil {
-            // TODO: need to skip the launch screen if user is already signed in. Go straight to home
-            print("Current user: " + (Auth.auth().currentUser?.displayName)!)
-        }*/
         
         signupBtn.backgroundColor = .clear
         signupBtn.layer.borderWidth = 3
@@ -51,13 +37,15 @@ class LaunchViewController: UIViewController {
         loginBtn.layer.borderWidth = 3
         loginBtn.layer.borderColor = UIColor.white.cgColor
         loginBtn.layer.borderColor = themeGreen.cgColor
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Show the navigation bar on other view controllers
-        // self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     override func didReceiveMemoryWarning() {

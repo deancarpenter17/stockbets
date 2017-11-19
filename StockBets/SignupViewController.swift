@@ -15,7 +15,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signupButton: RoundedButton!
-    
+        
     // our defined colors
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
@@ -26,15 +26,16 @@ class SignupViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = themeBlue
+        /*self.navigationController?.navigationBar.barTintColor = themeBlue
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]*/
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -64,9 +65,8 @@ class SignupViewController: UIViewController {
                         print("error in commit changes!")
                         return
                     }
-                    
-                    AlertController.showAlert(self, title: "Success", message: "Successfully signed up!")
-                    // self.performSegue(withIdentifier: "signupSegue", sender: nil)
+                    let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
+                    appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
                 })
             })
         }

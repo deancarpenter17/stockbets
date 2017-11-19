@@ -32,9 +32,14 @@
 		D83C96A91FA80FCD00457A2F /* FundamentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */; };
 		E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE31FA28F0B005299B5 /* DataStore.swift */; };
 		E3220AE61FA28F52005299B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE51FA28F52005299B5 /* User.swift */; };
+		E34E7E351FC098FB0076A1EF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E7E341FC098FB0076A1EF /* TabBarController.swift */; };
+		E36B0F6C1FC0D63B00768839 /* BetPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */; };
+		E36B0F6E1FC0DCEF00768839 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */; };
+		E36B0F701FC0DCFA00768839 /* BetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6F1FC0DCFA00768839 /* BetViewController.swift */; };
 		E39252521FA2693700BF8E38 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39252511FA2693700BF8E38 /* SignupViewController.swift */; };
 		E39252541FA2852300BF8E38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E39252531FA2852200BF8E38 /* GoogleService-Info.plist */; };
 		E3A8EC531F999A5E00903333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8EC521F999A5E00903333 /* LoginViewController.swift */; };
+		E3D762B31FBDF8CA00B61D00 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D762B21FBDF8CA00B61D00 /* SettingsViewController.swift */; };
 		E3DEBDD41FA43392000450A6 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEBDD31FA43392000450A6 /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,9 +95,14 @@
 		D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundamentalsViewController.swift; sourceTree = "<group>"; };
 		E3220AE31FA28F0B005299B5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		E3220AE51FA28F52005299B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E34E7E341FC098FB0076A1EF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetPostViewController.swift; sourceTree = "<group>"; };
+		E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		E36B0F6F1FC0DCFA00768839 /* BetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetViewController.swift; sourceTree = "<group>"; };
 		E39252511FA2693700BF8E38 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E39252531FA2852200BF8E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3A8EC521F999A5E00903333 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E3D762B21FBDF8CA00B61D00 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E3DEBDD31FA43392000450A6 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E582688104B0FBEC0167566D /* Pods_StockBetsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockBetsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE69804DB11277BC6E5F0268 /* Pods_StockBets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockBets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +239,11 @@
 				85FE9E0E1FA8D5AB00110285 /* HomeTableViewController.swift */,
 				85FE9E101FA9036200110285 /* HomeTableViewCell.swift */,
 				31885A401FA973D00015996F /* ProfileViewController.swift */,
+				E3D762B21FBDF8CA00B61D00 /* SettingsViewController.swift */,
+				E34E7E341FC098FB0076A1EF /* TabBarController.swift */,
+				E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */,
+				E36B0F6F1FC0DCFA00768839 /* BetViewController.swift */,
+				E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,7 +354,6 @@
 				TargetAttributes = {
 					85A02AF21F981FA10042B9A5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 68D692BUBS;
 						ProvisioningStyle = Automatic;
 					};
 					85A02B081F981FA10042B9A5 = {
@@ -570,13 +584,18 @@
 				31885A461FA973D00015996F /* TweetTableViewCell.swift in Sources */,
 				85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */,
 				85FE9E0F1FA8D5AB00110285 /* HomeTableViewController.swift in Sources */,
+				E3D762B31FBDF8CA00B61D00 /* SettingsViewController.swift in Sources */,
 				85FE9E0D1FA8D49E00110285 /* Stock.swift in Sources */,
 				31885A441FA973D00015996F /* ProfileViewController.swift in Sources */,
 				85FE9E111FA9036200110285 /* HomeTableViewCell.swift in Sources */,
 				D83C96A91FA80FCD00457A2F /* FundamentalsViewController.swift in Sources */,
+				E36B0F6E1FC0DCEF00768839 /* PostViewController.swift in Sources */,
 				85A02B2D1F983FD80042B9A5 /* LaunchViewController.swift in Sources */,
 				85A02AF71F981FA10042B9A5 /* AppDelegate.swift in Sources */,
 				85FE9E131FA9052500110285 /* StockList.swift in Sources */,
+				E34E7E351FC098FB0076A1EF /* TabBarController.swift in Sources */,
+				E36B0F6C1FC0D63B00768839 /* BetPostViewController.swift in Sources */,
+				E36B0F701FC0DCFA00768839 /* BetViewController.swift in Sources */,
 				85A02B2B1F98234C0042B9A5 /* UIImage+Gif.swift in Sources */,
 				E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */,
 				E3DEBDD41FA43392000450A6 /* AlertController.swift in Sources */,
@@ -737,9 +756,10 @@
 			baseConfigurationReference = C7B125916779E5B4A99E25FA /* Pods-StockBets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 68D692BUBS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StockBets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dontforce.StockBets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -751,7 +771,7 @@
 			baseConfigurationReference = 053C4A4274B060CC10319468 /* Pods-StockBets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 68D692BUBS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StockBets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dontforce.StockBets;

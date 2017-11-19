@@ -18,13 +18,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Profile"
-        
+        navigationItem.title = "Profile"
         createDataModels()
         
         self.navigationController?.navigationBar.barTintColor = themeBlue

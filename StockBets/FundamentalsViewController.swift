@@ -11,6 +11,7 @@ import UIKit
 class FundamentalsViewController: UIViewController {
 
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
+    let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
     
     @IBOutlet weak var closePrice: UILabel!
     @IBOutlet weak var volume: UILabel!
@@ -41,7 +42,7 @@ class FundamentalsViewController: UIViewController {
     
     func cornerBorder(label : UILabel) {
         label.layer.masksToBounds = true
-        label.layer.borderColor = themeGreen.cgColor
+        label.layer.borderColor = themeBlue.cgColor
         label.layer.borderWidth = 1
         label.layer.cornerRadius = 8
     }

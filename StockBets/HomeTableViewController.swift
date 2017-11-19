@@ -14,11 +14,13 @@ class HomeTableViewController: UITableViewController {
     
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+    }
     
     override func viewDidLoad() {
-        self.navigationItem.setHidesBackButton(true, animated: false)
-
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
