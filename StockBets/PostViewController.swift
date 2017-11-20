@@ -43,8 +43,21 @@ class PostViewController: UIViewController {
     @IBAction func cancelPostButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
+    
+    // updates database to include the post. Sends them back to home screen
     @IBAction func submitPostButton(_ sender: Any) {
-        
+        if let post = postTextField.text {
+            DataStore.shared.post(userPost: post)
+            
+            // send them to home screen
+            guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }
+            let rootController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarController")
+            appDel.window?.rootViewController = rootController
+            AlertController.showAlert(self, title: "Success!", message: "Posted successfully")
+        }
+        else {
+            AlertController.showAlert(self, title: "Error", message: "Posts must contain a body!")
+        }
     }
     
     /*

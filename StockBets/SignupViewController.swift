@@ -15,7 +15,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signupButton: RoundedButton!
-        
+    
     // our defined colors
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
@@ -48,27 +48,45 @@ class SignupViewController: UIViewController {
         if let username = usernameTextField.text, let password = passwordTextField.text,
             let email = emailTextField.text {
             
-            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-                guard error == nil else {
-                    AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                    print("Could not create user: " + error!.localizedDescription)
-                    return
+            self.checkUserNameAlreadyExist(newUserName: username) { isExist in
+                if isExist {
+                    print("Username exist")
+                    AlertController.showAlert(self, title: "Error", message: "Username already exists! Try again.")
+                    
                 }
-                
-                guard let user = user else { return }
-                
-                let changeRequest = user.createProfileChangeRequest()
-                changeRequest.displayName = username
-                changeRequest.commitChanges(completion: {( error ) in
-                    guard error == nil else {
-                        AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                        print("error in commit changes!")
-                        return
-                    }
-                    let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
-                    appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
-                })
-            })
+                else {
+                    print("create new user")
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                        guard error == nil else {
+                            AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
+                            print("Could not create user: " + error!.localizedDescription)
+                            return
+                        }
+                        
+                        guard let user = user else { return }
+                        
+                        let changeRequest = user.createProfileChangeRequest()
+                        changeRequest.displayName = username
+                        changeRequest.commitChanges(completion: {( error ) in
+                            guard error == nil else {
+                                AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
+                                print("error in commit changes!")
+                                return
+                            }
+                            
+                            // add this dude to our firebase database as well
+                            let myUser = User(username: username, email: email)
+                            DataStore.shared.addUser(user: myUser)
+                            
+                            // go to home screen
+                            let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
+                            appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
+                        })
+                    })
+                }
+            }
+            
+            
         }
         
         else {
@@ -143,6 +161,21 @@ class SignupViewController: UIViewController {
     //
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func checkUserNameAlreadyExist(newUserName: String, completion: @escaping(Bool) -> Void) {
+        
+        let ref = Database.database().reference()
+        ref.child("users").queryOrdered(byChild: "username").queryEqual(toValue: newUserName)
+            .observeSingleEvent(of: .value, with: {(snapshot: DataSnapshot) in
+                
+                if snapshot.exists() {
+                    completion(true)
+                }
+                else {
+                    completion(false)
+                }
+            })
     }
 
 }

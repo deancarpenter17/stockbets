@@ -15,6 +15,7 @@ class DataStore {
     
     private var ref: DatabaseReference!
     private var users: [User]!
+    private var posts: [Post]!
     private var currentUser: User?
     
     private init() {
@@ -34,8 +35,6 @@ class DataStore {
     func addUser(user: User) {
         // define array of key/value pairs to store for this person.
         let userRecord = [
-            "firstName": user.firstName,
-            "lastName": user.lastName,
             "username": user.username,
             "email": user.email
         ]
@@ -62,16 +61,46 @@ class DataStore {
                 for u in users {
                     let username = u.key as! String
                     let user = u.value as! [String:String]
-                    let firstName = user["firstName"]
-                    let lastName = user["lastName"]
                     let email = user["email"]
-                    let newUser = User(firstName: firstName!, lastName: lastName!, username: username,
+                    let newUser = User(username: username,
                                        email: email!)
                     self.users.append(newUser)
                 }
             }
+            
+            print("\(DataStore.shared.count()) users have been loaded from firebase!")
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+   
+    
+  /*
+    Creates a post for the current user. These are shown on the profile screen.
+     
+    In order to flatten Firebase structure for optimization, Instead of storing
+    a users tweets under the "user" key, I store it under a separate "posts" key.
+    To maintain a unique key under "posts", I'm going to store the posts from each
+    userer as a "username:timestamp" pair. This makes retrieval easy, just search the posts
+    for all posts matching "username" in the "username:timestamp" pair.
+  */
+    func post(userPost: String) {
+        // this produces a decimal, need to convert to
+        let time = NSDate().timeIntervalSince1970
+        let timestamp = NSInteger(round(time)).description
+
+        if let username = Auth.auth().currentUser?.displayName {
+            let timestampAndUsernameKey:String = username + ":" + timestamp
+            print(timestampAndUsernameKey)
+            let postDict = ["post": userPost]
+            self.ref.child("posts").child(timestampAndUsernameKey).setValue(postDict)
+        }
+        
+        /*
+        -- For decoding the timestamp
+        let myTimeInterval = TimeInterval(timestamp)
+        let time = NSDate(timeIntervalSince1970: TimeInterval(myTimeInterval))
+        -- Then, call the appropriate NSDate() functions
+        */
     }
 }

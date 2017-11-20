@@ -32,6 +32,7 @@
 		D83C96A91FA80FCD00457A2F /* FundamentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */; };
 		E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE31FA28F0B005299B5 /* DataStore.swift */; };
 		E3220AE61FA28F52005299B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE51FA28F52005299B5 /* User.swift */; };
+		E34C799E1FC3895B006E3BA6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C799D1FC3895B006E3BA6 /* Post.swift */; };
 		E34E7E351FC098FB0076A1EF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E7E341FC098FB0076A1EF /* TabBarController.swift */; };
 		E36B0F6C1FC0D63B00768839 /* BetPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */; };
 		E36B0F6E1FC0DCEF00768839 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */; };
@@ -95,6 +96,7 @@
 		D83C96A81FA80FCD00457A2F /* FundamentalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundamentalsViewController.swift; sourceTree = "<group>"; };
 		E3220AE31FA28F0B005299B5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		E3220AE51FA28F52005299B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E34C799D1FC3895B006E3BA6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E34E7E341FC098FB0076A1EF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetPostViewController.swift; sourceTree = "<group>"; };
 		E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				31885A421FA973D00015996F /* TweetTableViewCell.swift */,
 				31885A411FA973D00015996F /* Tweet.swift */,
 				E3220AE51FA28F52005299B5 /* User.swift */,
+				E34C799D1FC3895B006E3BA6 /* Post.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				E3A8EC531F999A5E00903333 /* LoginViewController.swift in Sources */,
 				E39252521FA2693700BF8E38 /* SignupViewController.swift in Sources */,
 				31885A461FA973D00015996F /* TweetTableViewCell.swift in Sources */,
+				E34C799E1FC3895B006E3BA6 /* Post.swift in Sources */,
 				85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */,
 				85FE9E0F1FA8D5AB00110285 /* HomeTableViewController.swift in Sources */,
 				E3D762B31FBDF8CA00B61D00 /* SettingsViewController.swift in Sources */,

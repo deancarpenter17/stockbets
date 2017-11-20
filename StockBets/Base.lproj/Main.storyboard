@@ -23,7 +23,6 @@
         <!--Navigation Controller-->
         <scene sceneID="bFa-II-tqt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DGt-1u-GEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HomeNavController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NAu-wR-fv1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home_tab" id="Ngs-rW-vcw">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
@@ -35,13 +34,13 @@
                         <segue destination="P7e-Au-D2m" kind="relationship" relationship="rootViewController" id="jQe-U8-JxL"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGt-1u-GEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1367" y="-643"/>
         </scene>
         <!--Home-->
         <scene sceneID="z1G-fn-aDT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xJ-cK-lTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="P7e-Au-D2m" customClass="HomeTableViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="JAT-4a-fBz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
@@ -111,13 +110,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xJ-cK-lTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2345" y="-644"/>
         </scene>
         <!--Fundamentals-->
         <scene sceneID="IcS-ea-D2G">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RvJ-Rv-kBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="f" title="Fundamentals" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nwz-Fp-M30" customClass="FundamentalsViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tjh-3W-Knf"/>
@@ -319,13 +318,13 @@
                         <outlet property="yearRange" destination="WeC-zo-DbB" id="KDt-gb-jPz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RvJ-Rv-kBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3392.8000000000002" y="-1014.2428785607198"/>
         </scene>
         <!--LaunchScreen-->
         <scene sceneID="0dP-cm-5vt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nf4-DG-nJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LaunchViewController" title="LaunchScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l25-K7-bJC" customClass="LaunchViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0AR-jX-kvU"/>
@@ -418,13 +417,13 @@
                         <outlet property="signupBtn" destination="cg1-cF-TEk" id="h1n-8T-PV9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nf4-DG-nJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1508" y="-44.527736131934034"/>
         </scene>
         <!--Login-->
         <scene sceneID="RYS-ZU-QxP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DS9-tI-tgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Login" id="8Ll-NQ-OEn" customClass="LoginViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M0x-MQ-DYs"/>
@@ -517,13 +516,13 @@
                         <outlet property="passwordTextField" destination="FLg-9Z-GtO" id="0De-2j-02a"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DS9-tI-tgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-644" y="460.11994002998506"/>
         </scene>
         <!--Signup-->
         <scene sceneID="i7M-Ks-phU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jP8-gI-ccV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Signup" id="bDC-j3-tOk" customClass="SignupViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wua-Gz-L8P"/>
@@ -654,13 +653,13 @@
                         <outlet property="usernameTextField" destination="HwW-fU-MLe" id="dGt-g1-huW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jP8-gI-ccV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-672.79999999999995" y="-458.32083958020991"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="oxw-iM-jBh"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -678,13 +677,13 @@
                         <segue destination="qcu-OL-N0c" kind="relationship" relationship="viewControllers" id="qJs-xN-CUn"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="415.19999999999999" y="204.64767616191907"/>
         </scene>
         <!--Profile-->
         <scene sceneID="en8-xU-pg3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vnz-aP-GbG" sceneMemberID="firstResponder"/>
                 <viewController title="Profile" id="lVV-ca-GPb" customClass="ProfileViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ilz-DZ-jAo"/>
@@ -850,13 +849,13 @@
                         <outlet property="tableView" destination="ev9-hM-bmC" id="gbF-FO-fY6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vnz-aP-GbG" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2748" y="483.50824587706148"/>
         </scene>
         <!--Bet Post View Controller-->
         <scene sceneID="ZMd-BL-iis">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mqa-HG-fCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="HLU-VC-avg" customClass="BetPostViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a9A-iY-C8f"/>
@@ -952,13 +951,13 @@
                         <outlet property="postButton" destination="WFf-X8-nP6" id="eX1-GV-vvu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqa-HG-fCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4268" y="-100.29985007496252"/>
         </scene>
         <!--Post-->
         <scene sceneID="9gb-IC-0IX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lnl-U0-6w1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="nHJ-sr-bgm" customClass="PostViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XQo-U3-BgS"/>
@@ -1007,14 +1006,13 @@
                         <outlet property="submitPostButton" destination="uUv-1X-2Zv" id="OF7-wZ-mRC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnl-U0-6w1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5624.8000000000002" y="311.69415292353824"/>
         </scene>
         <!--Bet-->
         <scene sceneID="ESw-zd-5p6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jub-az-n2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1li-He-ej2" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="MLg-M4-Mry" customClass="BetViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9mj-6L-m3u"/>
@@ -1134,13 +1132,14 @@
                         <outlet property="timeFrameTextField" destination="b5c-Hr-kMn" id="vQs-fm-4e0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jub-az-n2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1li-He-ej2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5597.6000000000004" y="-584.25787106446785"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dEL-tN-sbE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="irC-2g-gdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="sLe-lt-yS6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="profile_tab" id="ciQ-B1-0Tb">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
@@ -1152,13 +1151,13 @@
                         <segue destination="lVV-ca-GPb" kind="relationship" relationship="rootViewController" id="4w3-aS-3zn"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irC-2g-gdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1431.2" y="483.50824587706148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lSp-3R-s8e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fUE-T6-EbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qcu-OL-N0c" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="settings_tab" id="B4K-eW-79R">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
@@ -1170,13 +1169,13 @@
                         <segue destination="3yL-g1-hAQ" kind="relationship" relationship="rootViewController" id="dBS-6N-6yg"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUE-T6-EbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="889" y="1452"/>
         </scene>
         <!--Settings-->
         <scene sceneID="mjd-P8-EdI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="deA-n8-faa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3yL-g1-hAQ" customClass="SettingsViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bmD-pn-8eg"/>
@@ -1215,13 +1214,13 @@
                         <outlet property="signOutButton" destination="i3C-Jv-euk" id="BlI-qD-NBN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deA-n8-faa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1953" y="1451"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ttw-dk-O7I">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sLI-Ff-iAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="LaunchNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rWc-XI-vdO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="alu-dQ-Mcd">
@@ -1233,6 +1232,7 @@
                         <segue destination="l25-K7-bJC" kind="relationship" relationship="rootViewController" id="tqv-9z-vRM"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLI-Ff-iAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2292" y="-45"/>
         </scene>
