@@ -34,6 +34,21 @@ class HomeTableViewCell: UITableViewCell {
         self.nameLbl.text = stock.name
         self.priceLbl.text = stock.price
         self.percentLbl.text = stock.percentChange
+        
+        determineColor(percent: (Double)(stock.percentChange)!)
+    }
+    
+    func determineColor(percent : Double) {
+        let bullish : UIColor = UIColor(red:0.50, green:0.82, blue:0.48, alpha:1.0)
+        let bearish : UIColor = UIColor(red:0.93, green:0.24, blue:0.26, alpha:1.0)
+        var color : UIColor
+        if (percent >= 0.0){
+            color = bullish
+        } else {
+            color = bearish
+        }
+        self.priceLbl.textColor = color
+        self.percentLbl.textColor = color
     }
 
 }

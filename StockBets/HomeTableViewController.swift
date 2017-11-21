@@ -151,13 +151,11 @@ class HomeTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "fundamentalsID" {
-            let destination = segue.destination as! FundamentalsViewController
+        if segue.identifier == "stockBoardID" {
+            let destination = segue.destination as! StockBoardViewController
             if let indexPath = tableView.indexPathForSelectedRow {
                 let stock = stocks.getStock(index: indexPath.row)
                 destination.stock = stock
-            } else {
-                print("no")
             }
         }
     }

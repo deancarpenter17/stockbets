@@ -21,6 +21,8 @@
 		85A02B2D1F983FD80042B9A5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02B2C1F983FD80042B9A5 /* LaunchViewController.swift */; };
 		85A02B2F1F9841A40042B9A5 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85A02B2E1F9841A40042B9A5 /* background.gif */; };
 		85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02B331F9907B50042B9A5 /* RoundedButton.swift */; };
+		85C8CE961FC482F9004C226F /* infoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85C8CE951FC482F8004C226F /* infoicon.png */; };
+		85C8CE981FC486AA004C226F /* StockBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C8CE971FC486AA004C226F /* StockBoardViewController.swift */; };
 		85FE9E0D1FA8D49E00110285 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE9E0C1FA8D49E00110285 /* Stock.swift */; };
 		85FE9E0F1FA8D5AB00110285 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE9E0E1FA8D5AB00110285 /* HomeTableViewController.swift */; };
 		85FE9E111FA9036200110285 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE9E101FA9036200110285 /* HomeTableViewCell.swift */; };
@@ -84,6 +86,8 @@
 		85A02B2C1F983FD80042B9A5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		85A02B2E1F9841A40042B9A5 /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background.gif; sourceTree = "<group>"; };
 		85A02B331F9907B50042B9A5 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		85C8CE951FC482F8004C226F /* infoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoicon.png; sourceTree = "<group>"; };
+		85C8CE971FC486AA004C226F /* StockBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockBoardViewController.swift; sourceTree = "<group>"; };
 		85FE9E0C1FA8D49E00110285 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		85FE9E0E1FA8D5AB00110285 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		85FE9E101FA9036200110285 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 				E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */,
 				E36B0F6F1FC0DCFA00768839 /* BetViewController.swift */,
 				E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */,
+				85C8CE971FC486AA004C226F /* StockBoardViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 		85A02B301F9843430042B9A5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				85C8CE951FC482F8004C226F /* infoicon.png */,
 				85A02B2E1F9841A40042B9A5 /* background.gif */,
 				85FE9E141FA959EE00110285 /* handshake.png */,
 			);
@@ -401,6 +407,7 @@
 				E39252541FA2852300BF8E38 /* GoogleService-Info.plist in Resources */,
 				85A02B2F1F9841A40042B9A5 /* background.gif in Resources */,
 				85A02AFE1F981FA10042B9A5 /* Main.storyboard in Resources */,
+				85C8CE961FC482F9004C226F /* infoicon.png in Resources */,
 				85FE9E151FA959EE00110285 /* handshake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +612,7 @@
 				E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */,
 				E3DEBDD41FA43392000450A6 /* AlertController.swift in Sources */,
 				31885A431FA973D00015996F /* BetTableViewCell.swift in Sources */,
+				85C8CE981FC486AA004C226F /* StockBoardViewController.swift in Sources */,
 				E3220AE61FA28F52005299B5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
