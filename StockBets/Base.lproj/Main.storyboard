@@ -110,7 +110,6 @@
         <!--<name>-->
         <scene sceneID="jfB-a1-6BB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="evb-81-q9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="stockBoardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bm4-Gw-6bX" customClass="StockBoardViewController" customModule="StockBets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3X8-HU-Lmd"/>
@@ -309,6 +308,7 @@
                         <outlet property="priceLbl" destination="KeN-CM-NTL" id="CJE-nr-RhC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evb-81-q9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3360.8000000000002" y="-1101.4992503748126"/>
         </scene>
