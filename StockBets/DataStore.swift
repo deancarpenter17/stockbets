@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 class DataStore {
     static let shared = DataStore()
@@ -18,21 +19,38 @@ class DataStore {
     private var posts: [Post]!
     private var bets: [Bet]!
     
-    private var currentUser: User?
+    private var currentUsername: String!
     
     private init() {
         // Get a database reference.
         ref = Database.database().reference()
+        self.currentUsername = Auth.auth().currentUser?.displayName
+    }
+    
+    func getUsers() -> [Post] {
+        return posts
     }
     
     func userCount() -> Int {
         return users.count
     }
     
+    func getCurrentUsername() -> String {
+        return currentUsername
+    }
+    
+    func getPosts() -> [Post] {
+        return posts
+    }
+    
     func postCount() -> Int {
         return posts?.count ?? 0
     }
     
+    func getBets() -> [Bet] {
+        return bets
+    }
+
     func betCount() -> Int {
         return bets?.count ?? 0
     }
@@ -40,6 +58,16 @@ class DataStore {
     func getUser(index: Int) -> User {
         return users[index]
     }
+    
+    func convertNSDate(date: NSDate) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
+        formatter.timeStyle = .medium
+        
+        return formatter.string(from: date as Date!)
+        
+    }
+    
     
     func addUser(user: User) {
         // define array of key/value pairs to store for this person.
@@ -103,8 +131,7 @@ class DataStore {
                     // extract NSDate from timeSince1970 which is stored in db
                     let myTimeInterval = TimeInterval(time)
                     let date = NSDate(timeIntervalSince1970: myTimeInterval!)
-                    print("Owner: \(ownerUsername): \(date.description)")
-                    
+
                     let newPost = Post(ownerUsername: ownerUsername, date: date, post: postString)
                     newPosts.append(newPost)
                 }

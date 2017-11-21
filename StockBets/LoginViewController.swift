@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,33 +52,33 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         if let username = emailTextField.text,
             let password = passwordTextField.text {
-                Auth.auth().signIn(withEmail: username, password: password) { (user, error) in
-                    guard error == nil else {
-                        AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                        return
-                    }
-                    guard let user = user else { return }
-                    print("User uid: " + String(user.uid))
-                    
-                    let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
-                    appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
+            Auth.auth().signIn(withEmail: username, password: password) { (user, error) in
+                guard error == nil else {
+                    AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
+                    return
                 }
+                guard let user = user else { return }
+                print("User uid: " + String(user.uid))
+                
+                let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
+                appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
+            }
         }
-        
+            
         else {
             AlertController.showAlert(self, title: "Missing info", message: "You must fill out all fields!")
         }
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     func setupViews() {
         // initialize Username textfield
@@ -104,8 +104,8 @@ class LoginViewController: UIViewController {
         
         // initialize nav bar
         /*self.navigationController?.navigationBar.barTintColor = themeBlue
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]*/
+         self.navigationController?.navigationBar.tintColor = UIColor.white
+         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]*/
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

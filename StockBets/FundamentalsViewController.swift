@@ -9,7 +9,7 @@
 import UIKit
 
 class FundamentalsViewController: UIViewController {
-
+    
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
     
@@ -46,13 +46,13 @@ class FundamentalsViewController: UIViewController {
         label.layer.borderWidth = 1
         label.layer.cornerRadius = 8
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     func initiateLabels() {
         closePrice.text = stock?.price
         volume.text = stock?.volume
@@ -64,13 +64,13 @@ class FundamentalsViewController: UIViewController {
         desc.text = stock?.desc
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

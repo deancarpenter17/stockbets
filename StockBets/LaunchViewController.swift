@@ -11,11 +11,11 @@ import Firebase
 import FirebaseAuth
 
 class LaunchViewController: UIViewController {
-
+    
     @IBOutlet weak var backgroundGIF: UIImageView!
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
-        
+    
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,21 +47,21 @@ class LaunchViewController: UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

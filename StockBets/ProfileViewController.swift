@@ -9,10 +9,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    private var tweets:[Tweet] = []
-    private var positions:[String] = []
-
+    
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -23,47 +21,35 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = "Profile"
-        createDataModels()
+        
+        usernameLabel.text = "@" + DataStore.shared.getCurrentUsername()
         
         self.navigationController?.navigationBar.barTintColor = themeBlue
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: themeGreen]
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func createDataModels() {
-        let tweet1 = Tweet.init(username: "StockBets", timestamp: "1 hour ago", message: "$SNAP is way too overvalued.")
-        let tweet2 = Tweet.init(username: "StockBets", timestamp: "2 hours ago", message: "@TradeJoe lol you really think the $SNAP IPO will be successful?")
-        tweets.append(tweet1)
-        tweets.append(tweet2)
-        
-        let position1 = "$AMD @ 15 on 10/31/17 (CALL)"
-        let position2 = "$JDST @ $17 on 10/31/17 (PUT)"
-        
-        positions.append(position1)
-        positions.append(position2)
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         var returnValue = 0
         
         switch(segmentedControl.selectedSegmentIndex) {
         case 0:
-            returnValue = tweets.count
+            returnValue = DataStore.shared.postCount()
             break
         case 1:
-            returnValue = positions.count
+            returnValue = DataStore.shared.betCount()
             break
         default:
             break
@@ -74,18 +60,21 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let posts = DataStore.shared.getPosts()
+        let bets = DataStore.shared.getBets()
+        
         if(segmentedControl.selectedSegmentIndex == 0) {
-            let tweet = tweets[indexPath.row]
+            let post = posts[indexPath.row]
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetTableViewCell
-            cell.config(username: tweet.username, timestamp: tweet.timestamp, message: tweet.message)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+            cell.config(username: post.ownerUsername, date: post.date, post: post.post)
             return cell
         }
         else {
-            let position = positions[indexPath.row]
+            let bet = bets[indexPath.row]
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "positionCell", for: indexPath) as! PositionTableViewCell
-            cell.positionLabel.text = position
+            let cell = tableView.dequeueReusableCell(withIdentifier: "betCell", for: indexPath) as! BetTableViewCell
+            cell.config(username: bet.ownerUsername, date: bet.date, stock: bet.stock, price: bet.priceTarget, weeks: bet.weeks)
             return cell
         }
     }
