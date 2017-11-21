@@ -33,7 +33,7 @@ class BetTableViewCell: UITableViewCell {
         stockLabel.text = stock
         priceLabel.text = String(price)
         weeksLabel.text = String(weeks)
-        usernameLabel.text = "@" + DataStore.shared.getCurrentUsername()
+        usernameLabel.text = "@" + username
 
     }
 }

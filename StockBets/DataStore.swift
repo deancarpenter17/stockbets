@@ -50,7 +50,7 @@ class DataStore {
     func getBets() -> [Bet] {
         return bets
     }
-
+    
     func betCount() -> Int {
         return bets?.count ?? 0
     }
@@ -67,7 +67,6 @@ class DataStore {
         return formatter.string(from: date as Date!)
         
     }
-    
     
     func addUser(user: User) {
         // define array of key/value pairs to store for this person.
@@ -87,7 +86,6 @@ class DataStore {
         var newUsers = [User]()
         
         // Fetch the data from Firebase and store it in our internal users array.
-        // This is a one-time listener.
         ref.child("users").observe(DataEventType.value, with: { (snapshot) in
             // Get the top-level dictionary.
             let value = snapshot.value as? NSDictionary
@@ -131,7 +129,7 @@ class DataStore {
                     // extract NSDate from timeSince1970 which is stored in db
                     let myTimeInterval = TimeInterval(time)
                     let date = NSDate(timeIntervalSince1970: myTimeInterval!)
-
+                    
                     let newPost = Post(ownerUsername: ownerUsername, date: date, post: postString)
                     newPosts.append(newPost)
                 }
@@ -164,7 +162,7 @@ class DataStore {
                     let priceTarget: Double = Double(bet["priceTarget"]!)!
                     
                     let stock = bet["stock"]!
-
+                    
                     // extract NSDate from timeSince1970 which is stored in db
                     let myTimeInterval = TimeInterval(time)
                     let date = NSDate(timeIntervalSince1970: myTimeInterval!)
@@ -207,12 +205,8 @@ class DataStore {
             self.ref.child("posts").child(timestampAndUsernameKey).setValue(postDict)
         }
         
-        /*
-         -- For decoding the timestamp
-         let myTimeInterval = TimeInterval(timestamp)
-         let time = NSDate(timeIntervalSince1970: TimeInterval(myTimeInterval))
-         -- Then, call the appropriate NSDate() functions
-         */
+        // send notification to reload the profile table
+        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
     }
     
     func bet(stock: String, priceTarget: String, weeks: String) {

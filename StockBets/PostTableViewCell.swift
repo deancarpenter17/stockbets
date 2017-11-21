@@ -29,7 +29,7 @@ class PostTableViewCell: UITableViewCell {
     func config(username: String, date: NSDate, post: String) {
         dateLabel.text = DataStore.shared.convertNSDate(date: date)
         postLabel.text = post
-        usernameLabel.text = "@" + DataStore.shared.getCurrentUsername()
+        usernameLabel.text = "@" + username
         
     }
 }
