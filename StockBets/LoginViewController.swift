@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
                     return
                 }
                 guard let user = user else { return }
-                print("User uid: " + String(user.uid))
+                print("username: " + username)
                 
                 let appDelegateTemp = UIApplication.shared.delegate as? AppDelegate
                 appDelegateTemp?.window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()

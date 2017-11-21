@@ -100,6 +100,7 @@ class DataStore {
                                        email: email!)
                     newUsers.append(newUser)
                 }
+                
                 self.users = newUsers
             }
             
@@ -129,10 +130,12 @@ class DataStore {
                     // extract NSDate from timeSince1970 which is stored in db
                     let myTimeInterval = TimeInterval(time)
                     let date = NSDate(timeIntervalSince1970: myTimeInterval!)
-                    
                     let newPost = Post(ownerUsername: ownerUsername, date: date, post: postString)
                     newPosts.append(newPost)
                 }
+                
+                // Sort by date, Descending order
+                newPosts = newPosts.sorted(by: { Double($0.date.timeIntervalSinceNow) > Double($1.date.timeIntervalSinceNow) })
                 self.posts = newPosts
             }
             
@@ -170,6 +173,7 @@ class DataStore {
                     let newBet = Bet(stock: stock, price: priceTarget, weeks: weeks, ownerUsername: ownerUsername, date: date)
                     newBets.append(newBet)
                 }
+                newBets = newBets.sorted(by: { Double($0.date.timeIntervalSinceNow) > Double($1.date.timeIntervalSinceNow) })
                 self.bets = newBets
             }
             

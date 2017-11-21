@@ -72,6 +72,12 @@ class BetViewController: UIViewController {
                 
                 DataStore.shared.bet(stock: stock, priceTarget: priceText, weeks: weeksText)
                 
+                // this fixes a bug where the soft keyboard doesn't go away, even though
+                // we have the methods defined below..
+                stockTextField.resignFirstResponder()
+                priceTargetTextField.resignFirstResponder()
+                weeksTextField.resignFirstResponder()
+                
                 // send them to home screen
                 guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }
                 let rootController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarController")
@@ -110,5 +116,18 @@ class BetViewController: UIViewController {
         weeksTextField.layer.borderColor = themeGreen.cgColor
         weeksTextField.backgroundColor = themeBlue
         weeksTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 'First Responder' is the same as 'input focus'.
+        // We are removing input focus from the text field.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user touches on the main view (outside the UITextField).
+    //
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

@@ -16,7 +16,7 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var cancelPostButton: UIBarButtonItem!
     @IBOutlet weak var submitPostButton: UIBarButtonItem!
-    @IBOutlet weak var postTextField: UITextField!
+    @IBOutlet weak var postTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +46,13 @@ class PostViewController: UIViewController {
     
     // updates database to include the post. Sends them back to home screen
     @IBAction func submitPostButton(_ sender: Any) {
-        if let post = postTextField.text {
+        if let post = postTextView.text {
             if post == "" {
                 AlertController.showAlert(self, title: "Error", message: "Posts must contain a body!")
                 return
             }
             DataStore.shared.post(postText: post)
+            postTextView.resignFirstResponder()
             
             // send them to home screen
             guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -75,12 +76,28 @@ class PostViewController: UIViewController {
     */
     
     func setupViews() {
-        postTextField.attributedPlaceholder = NSAttributedString(string:"What would you like to post?:", attributes: [NSForegroundColorAttributeName: placeholderGray])
-        postTextField.layer.cornerRadius = 15.0
-        postTextField.layer.borderWidth = 1.5
-        postTextField.layer.borderColor = themeGreen.cgColor
-        postTextField.backgroundColor = themeBlue
-        postTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 10, 0)
+        //postTextView.attributedPlaceholder = NSAttributedString(string:"What would you like to post?:", attributes: [NSForegroundColorAttributeName: placeholderGray])
+        
+        // enable line breaks inside textview
+        postTextView.textContainer.lineBreakMode = NSLineBreakMode(rawValue: 1)!
+        postTextView.layer.cornerRadius = 15.0
+        postTextView.layer.borderWidth = 1.5
+        postTextView.layer.borderColor = themeGreen.cgColor
+        postTextView.backgroundColor = themeBlue
+        postTextView.layer.sublayerTransform = CATransform3DMakeTranslation(10, 10, 10)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 'First Responder' is the same as 'input focus'.
+        // We are removing input focus from the text field.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user touches on the main view (outside the UITextField).
+    //
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 }

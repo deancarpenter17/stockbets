@@ -13,8 +13,7 @@ import FirebaseAuth
 class HomeTableViewController: UITableViewController {
     
     var stocks = StockList()
-    private var currentUser: User?
-    
+
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -23,16 +25,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: false)
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Profile"
-        
-        usernameLabel.text = "@" + DataStore.shared.getCurrentUsername()
-        
+
         self.navigationController?.navigationBar.barTintColor = themeBlue
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: themeGreen]
         
@@ -66,7 +65,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         posts = DataStore.shared.getPosts()
         bets = DataStore.shared.getBets()
-        
+        usernameLabel.text = "@" + (Auth.auth().currentUser?.displayName)!
+
         if(segmentedControl.selectedSegmentIndex == 0) {
             let post = posts[indexPath.row]
             
