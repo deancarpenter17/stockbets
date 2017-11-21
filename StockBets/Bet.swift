@@ -10,12 +10,16 @@ import Foundation
 
 class Bet {
     var stock: String
-    var priceTarget: NSNumber
-    var weeks: NSNumber
+    var priceTarget: Double
+    var weeks: Int
+    var ownerUsername: String
+    var date: NSDate
     
-    init(stock: String, price: NSNumber, weeks: NSNumber) {
+    init(stock: String, price: Double, weeks: Int, ownerUsername: String, date: NSDate) {
         self.stock = stock
         self.priceTarget = price
         self.weeks = weeks
+        self.ownerUsername = ownerUsername
+        self.date = date
     }
 }

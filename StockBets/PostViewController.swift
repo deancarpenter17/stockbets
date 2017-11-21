@@ -51,7 +51,7 @@ class PostViewController: UIViewController {
                 AlertController.showAlert(self, title: "Error", message: "Posts must contain a body!")
                 return
             }
-            DataStore.shared.post(userPost: post)
+            DataStore.shared.post(postText: post)
             
             // send them to home screen
             guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }

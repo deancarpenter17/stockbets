@@ -66,14 +66,11 @@ class BetViewController: UIViewController {
             // ticker symbol should be capitalized
             stock = stock.uppercased()
             
-            // Convert the strings to NSNumber.
-            if let priceDouble = Double(priceText),
-                let weeksInt = Int(weeksText) {
+            // Validate the price/weeks strings.
+            if let _ = Double(priceText),
+                let _ = Int(weeksText) {
                 
-                let price = NSNumber(value: priceDouble)
-                let weeks = NSNumber(value: weeksInt)
-                
-                DataStore.shared.bet(userBet: Bet(stock: stock, price: price, weeks: weeks))
+                DataStore.shared.bet(stock: stock, priceTarget: priceText, weeks: weeksText)
                 
                 // send them to home screen
                 guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }

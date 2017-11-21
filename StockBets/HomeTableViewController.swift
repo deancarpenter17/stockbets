@@ -23,8 +23,10 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // initialize the list of users that we have in our firebase database.
+        // initialize the list of users, posts, and bets from Firebase
         DataStore.shared.loadUsers()
+        DataStore.shared.loadPosts()
+        DataStore.shared.loadBets()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
