@@ -44,6 +44,7 @@
 		E3A8EC531F999A5E00903333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8EC521F999A5E00903333 /* LoginViewController.swift */; };
 		E3D762B31FBDF8CA00B61D00 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D762B21FBDF8CA00B61D00 /* SettingsViewController.swift */; };
 		E3DEBDD41FA43392000450A6 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEBDD31FA43392000450A6 /* AlertController.swift */; };
+		E3EE49B71FC4DBE7005EDD5B /* BetsBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE49B61FC4DBE7005EDD5B /* BetsBoardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		E3A8EC521F999A5E00903333 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3D762B21FBDF8CA00B61D00 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E3DEBDD31FA43392000450A6 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		E3EE49B61FC4DBE7005EDD5B /* BetsBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsBoardTableViewCell.swift; sourceTree = "<group>"; };
 		E582688104B0FBEC0167566D /* Pods_StockBetsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockBetsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE69804DB11277BC6E5F0268 /* Pods_StockBets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockBets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E4961A307DEB8207533329 /* Pods-StockBetsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsTests/Pods-StockBetsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				E3220AE51FA28F52005299B5 /* User.swift */,
 				E34C799D1FC3895B006E3BA6 /* Post.swift */,
 				E34C799F1FC39D54006E3BA6 /* Bet.swift */,
+				E3EE49B61FC4DBE7005EDD5B /* BetsBoardTableViewCell.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				E39252521FA2693700BF8E38 /* SignupViewController.swift in Sources */,
 				31885A461FA973D00015996F /* PostTableViewCell.swift in Sources */,
 				E34C799E1FC3895B006E3BA6 /* Post.swift in Sources */,
+				E3EE49B71FC4DBE7005EDD5B /* BetsBoardTableViewCell.swift in Sources */,
 				85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */,
 				85FE9E0F1FA8D5AB00110285 /* HomeTableViewController.swift in Sources */,
 				E3D762B31FBDF8CA00B61D00 /* SettingsViewController.swift in Sources */,

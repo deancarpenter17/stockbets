@@ -161,7 +161,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="betCell" rowHeight="84" id="48U-Lw-wjh" customClass="BetTableViewCell" customModule="StockBets" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockBoardBetCell" rowHeight="84" id="48U-Lw-wjh" customClass="BetsBoardTableViewCell" customModule="StockBets" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="48U-Lw-wjh" id="aVf-oq-X8T">
@@ -280,11 +280,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="R8U-MS-zRF" id="NHy-dI-V5R"/>
-                                            <outlet property="priceLabel" destination="2ty-cm-63k" id="ygL-Wm-Jac"/>
-                                            <outlet property="stockLabel" destination="OaJ-QV-36s" id="D0x-SI-JJL"/>
-                                            <outlet property="usernameLabel" destination="KzE-Io-5sb" id="m0P-l9-km2"/>
-                                            <outlet property="weeksLabel" destination="6QN-ZR-UON" id="IQX-bo-4dH"/>
+                                            <outlet property="dateLabel" destination="R8U-MS-zRF" id="cFZ-cn-Mjd"/>
+                                            <outlet property="priceLabel" destination="2ty-cm-63k" id="j5d-bL-4eU"/>
+                                            <outlet property="stockLabel" destination="OaJ-QV-36s" id="W0R-6g-8kQ"/>
+                                            <outlet property="usernameLabel" destination="KzE-Io-5sb" id="omd-Sy-Bhq"/>
+                                            <outlet property="weeksLabel" destination="6QN-ZR-UON" id="xs9-xQ-MqC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -307,6 +307,7 @@
                         <outlet property="nameLbl" destination="6hd-kD-kjV" id="ZKD-zo-G9d"/>
                         <outlet property="percentLbl" destination="CX2-SQ-8nm" id="ZE5-ft-hNZ"/>
                         <outlet property="priceLbl" destination="KeN-CM-NTL" id="CJE-nr-RhC"/>
+                        <outlet property="tableView" destination="D5s-GO-3Pc" id="Aen-FR-xaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evb-81-q9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
