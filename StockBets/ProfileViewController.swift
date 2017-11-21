@@ -14,17 +14,21 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    var posts: [Post]!
+    var bets: [Bet]!
+    
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: false)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationItem.title = "Profile"
         
         usernameLabel.text = "@" + DataStore.shared.getCurrentUsername()
@@ -60,8 +64,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let posts = DataStore.shared.getPosts()
-        let bets = DataStore.shared.getBets()
+        posts = DataStore.shared.getPosts()
+        bets = DataStore.shared.getBets()
         
         if(segmentedControl.selectedSegmentIndex == 0) {
             let post = posts[indexPath.row]
@@ -83,4 +87,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.reloadData()
     }
     
+    /*
+        Gonna try to use this to reload the tableview anytime firebase is updated.
+    */
+    func refreshTable(notification: NSNotification) {
+        
+        print("Received refreshTable notification!")
+        posts = DataStore.shared.getPosts()
+        bets = DataStore.shared.getBets()
+        self.tableView.reloadData()
+    }
 }
