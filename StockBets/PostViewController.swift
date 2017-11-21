@@ -47,6 +47,10 @@ class PostViewController: UIViewController {
     // updates database to include the post. Sends them back to home screen
     @IBAction func submitPostButton(_ sender: Any) {
         if let post = postTextField.text {
+            if post == "" {
+                AlertController.showAlert(self, title: "Error", message: "Posts must contain a body!")
+                return
+            }
             DataStore.shared.post(userPost: post)
             
             // send them to home screen

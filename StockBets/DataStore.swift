@@ -103,4 +103,21 @@ class DataStore {
         -- Then, call the appropriate NSDate() functions
         */
     }
+    
+    func bet(userBet: Bet) {
+        let time = NSDate().timeIntervalSince1970
+        let timestamp = NSInteger(round(time)).description
+        
+        if let username = Auth.auth().currentUser?.displayName {
+            let timestampAndUsernameKey:String = username + ":" + timestamp
+            print(timestampAndUsernameKey)
+            let betDict = [
+                "stock": userBet.stock,
+                "priceTarget": userBet.priceTarget,
+                "weeks": userBet.weeks
+                ] as [String : Any]
+            
+            self.ref.child("bets").child(timestampAndUsernameKey).setValue(betDict)
+        }
+    }
 }

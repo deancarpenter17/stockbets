@@ -1129,7 +1129,7 @@
                     <connections>
                         <outlet property="priceTargetTextField" destination="89U-P7-HwN" id="NtE-vQ-3dj"/>
                         <outlet property="stockTextField" destination="dyu-2C-nMy" id="Jyk-Zg-YH0"/>
-                        <outlet property="timeFrameTextField" destination="b5c-Hr-kMn" id="vQs-fm-4e0"/>
+                        <outlet property="weeksTextField" destination="b5c-Hr-kMn" id="opy-qR-aSn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jub-az-n2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>

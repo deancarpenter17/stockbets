@@ -33,6 +33,7 @@
 		E3220AE41FA28F0B005299B5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE31FA28F0B005299B5 /* DataStore.swift */; };
 		E3220AE61FA28F52005299B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3220AE51FA28F52005299B5 /* User.swift */; };
 		E34C799E1FC3895B006E3BA6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C799D1FC3895B006E3BA6 /* Post.swift */; };
+		E34C79A01FC39D54006E3BA6 /* Bet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C799F1FC39D54006E3BA6 /* Bet.swift */; };
 		E34E7E351FC098FB0076A1EF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E7E341FC098FB0076A1EF /* TabBarController.swift */; };
 		E36B0F6C1FC0D63B00768839 /* BetPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */; };
 		E36B0F6E1FC0DCEF00768839 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */; };
@@ -97,6 +98,7 @@
 		E3220AE31FA28F0B005299B5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		E3220AE51FA28F52005299B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E34C799D1FC3895B006E3BA6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E34C799F1FC39D54006E3BA6 /* Bet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet.swift; sourceTree = "<group>"; };
 		E34E7E341FC098FB0076A1EF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E36B0F6B1FC0D63B00768839 /* BetPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetPostViewController.swift; sourceTree = "<group>"; };
 		E36B0F6D1FC0DCEF00768839 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				31885A411FA973D00015996F /* Tweet.swift */,
 				E3220AE51FA28F52005299B5 /* User.swift */,
 				E34C799D1FC3895B006E3BA6 /* Post.swift */,
+				E34C799F1FC39D54006E3BA6 /* Bet.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				85A02B2D1F983FD80042B9A5 /* LaunchViewController.swift in Sources */,
 				85A02AF71F981FA10042B9A5 /* AppDelegate.swift in Sources */,
 				85FE9E131FA9052500110285 /* StockList.swift in Sources */,
+				E34C79A01FC39D54006E3BA6 /* Bet.swift in Sources */,
 				E34E7E351FC098FB0076A1EF /* TabBarController.swift in Sources */,
 				E36B0F6C1FC0D63B00768839 /* BetPostViewController.swift in Sources */,
 				E36B0F701FC0DCFA00768839 /* BetViewController.swift in Sources */,
