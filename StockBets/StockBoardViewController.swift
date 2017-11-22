@@ -73,13 +73,13 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func loadBets() {
-        // Start with an empty array.
-        var newBets = [Bet]()
-        
+
         // Fetch the data from Firebase and store it in our internal users array.
         ref.child("bets").observe(DataEventType.value, with: { (snapshot) in
             // Get the top-level dictionary.
             let value = snapshot.value as? NSDictionary
+            
+            var newBets = [Bet]()
             
             if let bets = value {
                 // Iterate over the user objects and store in our internal users array.
@@ -113,6 +113,7 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    // we only want to show bets for the stock the user clicked on.
     func filterBetsForCurrentStock() {
         print(self.stock!.symbol)
         bets = bets.filter({$0.stock == self.stock!.symbol})

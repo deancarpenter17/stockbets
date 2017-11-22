@@ -2,7 +2,7 @@
 //  ProfileViewController.swift
 //  StockBets
 //
-//  Created by He, Kelvin on 10/30/17.
+//  Created by Dean Carpenter on 11/21/17.
 //  Copyright © 2017 6thStreetProductions. All rights reserved.
 //
 
@@ -15,6 +15,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    private var ref: DatabaseReference!
     
     var posts: [Post]!
     var bets: [Bet]!
@@ -29,8 +31,15 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        
         navigationItem.title = "Profile"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        loadPosts()
+        loadBets()
 
         self.navigationController?.navigationBar.barTintColor = themeBlue
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: themeGreen]
@@ -45,26 +54,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        var returnValue = 0
-        
         switch(segmentedControl.selectedSegmentIndex) {
         case 0:
-            returnValue = DataStore.shared.postCount()
-            break
+            return posts?.count ?? 0
         case 1:
-            returnValue = DataStore.shared.betCount()
-            break
+            return bets?.count ?? 0
         default:
-            break
+            return 0
         }
-        
-        return returnValue
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        posts = DataStore.shared.getPosts()
-        bets = DataStore.shared.getBets()
         usernameLabel.text = "@" + (Auth.auth().currentUser?.displayName)!
 
         if(segmentedControl.selectedSegmentIndex == 0) {
@@ -87,14 +88,78 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.reloadData()
     }
     
-    /*
-        Gonna try to use this to reload the tableview anytime firebase is updated.
-    */
-    func refreshTable(notification: NSNotification) {
-        
-        print("Received refreshTable notification!")
-        posts = DataStore.shared.getPosts()
-        bets = DataStore.shared.getBets()
-        self.tableView.reloadData()
+    func loadPosts() {
+
+        // Fetch the data from Firebase and store it in our internal users array.
+        ref.child("posts").observe(DataEventType.value, with: { (snapshot) in
+            // Get the top-level dictionary.
+            let value = snapshot.value as? NSDictionary
+            
+            var newPosts = [Post]()
+
+            if let posts = value {
+                // Iterate over the user objects and store in our internal users array.
+                for p in posts {
+                    let post = p.value as! [String:String]
+                    let ownerUsername = post["ownerUsername"]!
+                    let time = post["time"]!
+                    let postString = post["post"]!
+                    
+                    // extract NSDate from timeSince1970 which is stored in db
+                    let myTimeInterval = TimeInterval(time)
+                    let date = NSDate(timeIntervalSince1970: myTimeInterval!)
+                    let newPost = Post(ownerUsername: ownerUsername, date: date, post: postString)
+                    newPosts.append(newPost)
+                }
+                // Sort by date, Descending order
+                newPosts = newPosts.sorted(by: { Double($0.date.timeIntervalSinceNow) > Double($1.date.timeIntervalSinceNow) })
+                
+                self.posts = newPosts
+                print("\(self.posts.count) posts have been loaded from firebase!")
+                self.tableView.reloadData()
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func loadBets() {
+        // Start with an empty array.
+
+        // Fetch the data from Firebase and store it in our internal users array.
+        ref.child("bets").observe(DataEventType.value, with: { (snapshot) in
+            // Get the top-level dictionary.
+            let value = snapshot.value as? NSDictionary
+            
+            var newBets = [Bet]()
+            
+            if let bets = value {
+                // Iterate over the user objects and store in our internal users array.
+                for b in bets {
+                    let bet = b.value as! [String: String]
+                    let ownerUsername = bet["ownerUsername"]!
+                    let time = bet["time"]!
+                    // double bang is fine, we validated user input
+                    let weeks: Int = Int(bet["weeks"]!)!
+                    let priceTarget: Double = Double(bet["priceTarget"]!)!
+                    
+                    let stock = bet["stock"]!
+                    
+                    // extract NSDate from timeSince1970 which is stored in db
+                    let myTimeInterval = TimeInterval(time)
+                    let date = NSDate(timeIntervalSince1970: myTimeInterval!)
+                    
+                    let newBet = Bet(stock: stock, price: priceTarget, weeks: weeks, ownerUsername: ownerUsername, date: date)
+                    newBets.append(newBet)
+                }
+                newBets = newBets.sorted(by: { Double($0.date.timeIntervalSinceNow) > Double($1.date.timeIntervalSinceNow) })
+                self.bets = newBets
+                self.tableView.reloadData()
+            }
+            print("\(self.bets.count) bets have been loaded from firebase!")
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 }

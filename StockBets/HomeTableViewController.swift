@@ -27,8 +27,8 @@ class HomeTableViewController: UITableViewController {
         
         // initialize the list of users, posts, and bets from Firebase
         DataStore.shared.loadUsers()
-        DataStore.shared.loadPosts()
-        DataStore.shared.loadBets()
+        //DataStore.shared.loadPosts()
+        //DataStore.shared.loadBets()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
