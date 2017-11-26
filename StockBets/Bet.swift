@@ -14,6 +14,7 @@ class Bet {
     var weeks: Int
     var ownerUsername: String
     var date: NSDate
+    var reasoning : String = ""
     
     init(stock: String, price: Double, weeks: Int, ownerUsername: String, date: NSDate) {
         self.stock = stock
@@ -22,4 +23,10 @@ class Bet {
         self.ownerUsername = ownerUsername
         self.date = date
     }
+    
+    convenience init(stock: String, price: Double, weeks: Int, reasoning : String, ownerUsername: String, date: NSDate) {
+        self.init(stock : stock, price : price, weeks : weeks, ownerUsername : ownerUsername, date : date)
+        self.reasoning = reasoning
+    }
+    
 }

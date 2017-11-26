@@ -22,9 +22,13 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var percentLbl: UILabel!
+    @IBOutlet weak var stanceImg: UIImageView!
     
     let themeGreen: UIColor = UIColor(red:0.43, green:0.85, blue:0.63, alpha:1.0)
     let themeBlue: UIColor = UIColor(red:0.16, green:0.21, blue:0.25, alpha:1.0)
+    
+    let bullishColor: UIColor = UIColor(red:0.71, green:0.89, blue:0.69, alpha:1.0)
+    let bearishColor: UIColor = UIColor(red:0.94, green:0.44, blue:0.42, alpha:1.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +94,7 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
                     // double bang is fine, we validated user input
                     let weeks: Int = Int(bet["weeks"]!)!
                     let priceTarget: Double = Double(bet["priceTarget"]!)!
+                    let reasoning : String = String(describing: bet["reasoning"])
                     
                     let stock = bet["stock"]!
                     
@@ -97,7 +102,7 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
                     let myTimeInterval = TimeInterval(time)
                     let date = NSDate(timeIntervalSince1970: myTimeInterval!)
                     
-                    let newBet = Bet(stock: stock, price: priceTarget, weeks: weeks, ownerUsername: ownerUsername, date: date)
+                    let newBet = Bet(stock: stock, price: priceTarget, weeks: weeks, reasoning : reasoning, ownerUsername: ownerUsername, date: date)
                     newBets.append(newBet)
                 }
                 newBets = newBets.sorted(by: { Double($0.date.timeIntervalSinceNow) > Double($1.date.timeIntervalSinceNow) })
@@ -124,8 +129,24 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
         nameLbl.text = stock?.name
         priceLbl.text = stock?.price
         percentLbl.text = stock!.percentChange + "%"
-    }
-    
-    
+        
+        var pc = 0.0
+        if let pcD = stock?.percentChange {
+            pc = (pcD as NSString).doubleValue
+            if pc > 0.0 {
+//                self.percentLbl.textColor = bullishColor
+//                self.priceLbl.textColor = bullishColor
+//                self.nameLbl.textColor = bullishColor
+                self.stanceImg.image = #imageLiteral(resourceName: "bullish4.png")
+            } else {
+//                self.percentLbl.textColor = bearishColor
+//                self.priceLbl.textColor = bearishColor
+//                self.nameLbl.textColor = bearishColor
+                self.stanceImg.image = #imageLiteral(resourceName: "bearish.png")
+            }
+        }
 
+        
+    
+    }
 }

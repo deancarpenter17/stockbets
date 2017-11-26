@@ -143,7 +143,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                     // double bang is fine, we validated user input
                     let weeks: Int = Int(bet["weeks"]!)!
                     let priceTarget: Double = Double(bet["priceTarget"]!)!
-                    
+
                     let stock = bet["stock"]!
                     
                     // extract NSDate from timeSince1970 which is stored in db

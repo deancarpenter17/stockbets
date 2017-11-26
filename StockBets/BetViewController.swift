@@ -17,6 +17,7 @@ class BetViewController: UIViewController {
     @IBOutlet weak var stockTextField: UITextField!
     @IBOutlet weak var priceTargetTextField: UITextField!
     @IBOutlet weak var weeksTextField: UITextField!
+    @IBOutlet weak var reasoningTextField: UITextView!
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated:true);
@@ -58,10 +59,24 @@ class BetViewController: UIViewController {
         if var stock = stockTextField.text,
             let priceText = priceTargetTextField.text,
             let weeksText = weeksTextField.text {
-            if stock == "" || priceText == "" || weeksText == "" {
-                AlertController.showAlert(self, title: "Error", message: "You must fill out all fields!")
+            if stock == "" {
+                AlertController.showAlert(self, title: "Error", message: "You must indicate a stock!")
                 return
             }
+            if priceText == "" {
+                AlertController.showAlert(self, title: "Error", message: "You must indicate a price target!")
+                return
+            }
+            if weeksText == "" {
+                AlertController.showAlert(self, title: "Error", message: "You must indicate a time frame!")
+                return
+            }
+            
+            var reasoningText = reasoningTextField.text
+            if reasoningText == "" {
+                reasoningText = "N/A"
+            }
+            
             
             // ticker symbol should be capitalized
             stock = stock.uppercased()
@@ -70,13 +85,14 @@ class BetViewController: UIViewController {
             if let _ = Double(priceText),
                 let _ = Int(weeksText) {
                 
-                DataStore.shared.bet(stock: stock, priceTarget: priceText, weeks: weeksText)
+                DataStore.shared.bet(stock: stock, priceTarget: priceText, weeks: weeksText, reasoning : reasoningText!)
                 
                 // this fixes a bug where the soft keyboard doesn't go away, even though
                 // we have the methods defined below..
                 stockTextField.resignFirstResponder()
                 priceTargetTextField.resignFirstResponder()
                 weeksTextField.resignFirstResponder()
+                reasoningTextField.resignFirstResponder()
                 
                 // send them to home screen
                 guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }

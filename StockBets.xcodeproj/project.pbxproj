@@ -11,6 +11,7 @@
 		31885A441FA973D00015996F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A401FA973D00015996F /* ProfileViewController.swift */; };
 		31885A461FA973D00015996F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31885A421FA973D00015996F /* PostTableViewCell.swift */; };
 		36DBEF98EF657292692A1C67 /* Pods_StockBets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE69804DB11277BC6E5F0268 /* Pods_StockBets.framework */; };
+		850B92A31FC8F24F00966D1A /* bullish4.png in Resources */ = {isa = PBXBuildFile; fileRef = 850B92A21FC8F24E00966D1A /* bullish4.png */; };
 		85A02AF71F981FA10042B9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02AF61F981FA10042B9A5 /* AppDelegate.swift */; };
 		85A02AFE1F981FA10042B9A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A02AFC1F981FA10042B9A5 /* Main.storyboard */; };
 		85A02B001F981FA10042B9A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A02AFF1F981FA10042B9A5 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		85A02B341F9907B50042B9A5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A02B331F9907B50042B9A5 /* RoundedButton.swift */; };
 		85C8CE961FC482F9004C226F /* infoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85C8CE951FC482F8004C226F /* infoicon.png */; };
 		85C8CE981FC486AA004C226F /* StockBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C8CE971FC486AA004C226F /* StockBoardViewController.swift */; };
+		85F865EA1FC8F4F6004BE6FD /* bearish.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F865E91FC8F4F6004BE6FD /* bearish.png */; };
 		85FE9E0D1FA8D49E00110285 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE9E0C1FA8D49E00110285 /* Stock.swift */; };
 		85FE9E0F1FA8D5AB00110285 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE9E0E1FA8D5AB00110285 /* HomeTableViewController.swift */; };
 		85FE9E111FA9036200110285 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE9E101FA9036200110285 /* HomeTableViewCell.swift */; };
@@ -71,6 +73,7 @@
 		31885A421FA973D00015996F /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		4CE986698F216D76FAA859B5 /* Pods-StockBetsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsUITests/Pods-StockBetsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0D9916621E324C8E6895E8 /* Pods-StockBetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockBetsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockBetsUITests/Pods-StockBetsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		850B92A21FC8F24E00966D1A /* bullish4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullish4.png; path = ../../../bullish4.png; sourceTree = "<group>"; };
 		85A02AF31F981FA10042B9A5 /* StockBets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockBets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A02AF61F981FA10042B9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85A02AFD1F981FA10042B9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		85A02B331F9907B50042B9A5 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		85C8CE951FC482F8004C226F /* infoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoicon.png; sourceTree = "<group>"; };
 		85C8CE971FC486AA004C226F /* StockBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockBoardViewController.swift; sourceTree = "<group>"; };
+		85F865E91FC8F4F6004BE6FD /* bearish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bearish.png; path = ../../../bearish.png; sourceTree = "<group>"; };
 		85FE9E0C1FA8D49E00110285 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		85FE9E0E1FA8D5AB00110285 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		85FE9E101FA9036200110285 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -223,6 +227,9 @@
 		85A02B261F98212E0042B9A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E3220AE51FA28F52005299B5 /* User.swift */,
+				E34C799D1FC3895B006E3BA6 /* Post.swift */,
+				E34C799F1FC39D54006E3BA6 /* Bet.swift */,
 				85FE9E0C1FA8D49E00110285 /* Stock.swift */,
 				85FE9E121FA9052500110285 /* StockList.swift */,
 			);
@@ -271,9 +278,6 @@
 				E3220AE31FA28F0B005299B5 /* DataStore.swift */,
 				31885A3F1FA973D00015996F /* BetTableViewCell.swift */,
 				31885A421FA973D00015996F /* PostTableViewCell.swift */,
-				E3220AE51FA28F52005299B5 /* User.swift */,
-				E34C799D1FC3895B006E3BA6 /* Post.swift */,
-				E34C799F1FC39D54006E3BA6 /* Bet.swift */,
 				E3EE49B61FC4DBE7005EDD5B /* BetsBoardTableViewCell.swift */,
 			);
 			name = Support;
@@ -283,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				85C8CE951FC482F8004C226F /* infoicon.png */,
+				85F865E91FC8F4F6004BE6FD /* bearish.png */,
+				850B92A21FC8F24E00966D1A /* bullish4.png */,
 				85A02B2E1F9841A40042B9A5 /* background.gif */,
 				85FE9E141FA959EE00110285 /* handshake.png */,
 			);
@@ -405,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F865EA1FC8F4F6004BE6FD /* bearish.png in Resources */,
 				85A02B031F981FA10042B9A5 /* LaunchScreen.storyboard in Resources */,
 				85A02B001F981FA10042B9A5 /* Assets.xcassets in Resources */,
 				E39252541FA2852300BF8E38 /* GoogleService-Info.plist in Resources */,
@@ -412,6 +419,7 @@
 				85A02AFE1F981FA10042B9A5 /* Main.storyboard in Resources */,
 				85C8CE961FC482F9004C226F /* infoicon.png in Resources */,
 				85FE9E151FA959EE00110285 /* handshake.png in Resources */,
+				850B92A31FC8F24F00966D1A /* bullish4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
