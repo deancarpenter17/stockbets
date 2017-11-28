@@ -30,9 +30,9 @@ class BetTableViewCell: UITableViewCell {
     */
     func config(username: String, date: NSDate, stock: String, price: Double, weeks: Int) {
         dateLabel.text = DataStore.shared.convertNSDate(date: date)
-        stockLabel.text = stock
-        priceLabel.text = String(price)
-        weeksLabel.text = String(weeks)
+        stockLabel.text = "$" + stock
+        priceLabel.text = "@ $" + String(price)
+        weeksLabel.text = "in " + String(weeks) + " weeks"
         usernameLabel.text = "@" + username
 
     }

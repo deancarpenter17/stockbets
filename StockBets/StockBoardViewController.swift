@@ -58,7 +58,7 @@ class StockBoardViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("cellForRowAt indexPath: \(indexPath.row)")
         let bet = bets[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stockBoardBetCell", for: indexPath) as! BetsBoardTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stockBoardBetCell", for: indexPath) as! BetTableViewCell
         cell.config(username: bet.ownerUsername, date: bet.date, stock: bet.stock, price: bet.priceTarget, weeks: bet.weeks)
         return cell
     }
