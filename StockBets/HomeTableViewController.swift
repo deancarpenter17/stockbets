@@ -75,7 +75,7 @@ class HomeTableViewController: UITableViewController {
     // function that initializes the stock list with data from firebase
     func initializeStockList() {
         
-        let bitcoin : Stock = Stock(symbol: "BTCUSD", name: "Bitcoin USD", price: "11594.75", percentChange: "0.39", volume: "-", avgVolume: "-", dayRange: "10994.985-11649.995", yearRange: "752.80-11904.76", peRatio: "-", mktCap: "192.27B", desc: "Bitcoin is a type of digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank.")
+        let bitcoin : Stock = Stock(symbol: "BTCUSD", name: "Bitcoin USD", price: "11594.75", percentChange: "+0.39", volume: "-", avgVolume: "-", dayRange: "10994.985-11649.995", yearRange: "752.80-11904.76", peRatio: "-", mktCap: "192.27B", desc: "Bitcoin is a type of digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank.")
         stocks.addStock(stock: bitcoin)
         let aapl : Stock = Stock(symbol: "AAPL", name: "Apple, Inc", price: "169.04", percentChange: "+2.32", volume: "34,443,055", avgVolume: "28,151,642", dayRange: "166.94-169.65", yearRange: "104.08-169.65", peRatio: "19.21", mktCap: "61.58B", desc: "Apple, Inc. engages in the design, manufacture, and marketing of mobile communication, media devices, personal computers, and portable digital music players.")
         stocks.addStock(stock: aapl)
