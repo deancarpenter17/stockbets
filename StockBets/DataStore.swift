@@ -163,7 +163,6 @@ class DataStore {
                     // double bang is fine, we validated user input
                     let weeks: Int = Int(bet["weeks"]!)!
                     let priceTarget: Double = Double(bet["priceTarget"]!)!
-                    let reasoning : String = bet["reasoning"]!
                     
                     let stock = bet["stock"]!
                     
@@ -171,7 +170,7 @@ class DataStore {
                     let myTimeInterval = TimeInterval(time)
                     let date = NSDate(timeIntervalSince1970: myTimeInterval!)
                     
-                    let newBet = Bet(stock: stock, price: priceTarget, weeks: weeks, reasoning : reasoning, ownerUsername: ownerUsername, date: date)
+                    let newBet = Bet(stock: stock, price: priceTarget, weeks: weeks, ownerUsername: ownerUsername, date: date)
                     newBets.append(newBet)
                 }
                 newBets = newBets.sorted(by: { Double($0.date.timeIntervalSinceNow) > Double($1.date.timeIntervalSinceNow) })
@@ -214,7 +213,7 @@ class DataStore {
         //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
     }
     
-    func bet(stock: String, priceTarget: String, weeks: String, reasoning : String) {
+    func bet(stock: String, priceTarget: String, weeks: String) {
         let time = NSDate().timeIntervalSince1970
         let timestamp = NSInteger(round(time)).description
         
@@ -225,7 +224,6 @@ class DataStore {
                 "stock": stock,
                 "priceTarget": priceTarget,
                 "weeks": weeks,
-                "reasoning" : reasoning,
                 "ownerUsername": username,
                 "time": timestamp
                 ] as [String : Any]
